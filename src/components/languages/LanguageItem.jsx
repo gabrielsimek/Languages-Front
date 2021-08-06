@@ -9,7 +9,7 @@ const LanguageItem = ({ name, designedBy, firstAppeared, website, logo }) => {
         <h2>{name}</h2>
         <p>Designed By: {designedBy}</p>
         <p>First Appeared: {firstAppeared}</p>
-        <p>Website: {website}</p>
+        <a href={website}>Website Link</a>
       </figcaption>
     </figure>
   );

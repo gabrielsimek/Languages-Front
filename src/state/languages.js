@@ -13,4 +13,8 @@ const useLanguages = () => {
   return [languages, loading];
 };
 
+
+const useLanguage = () => {
+    
+};
 export { useLanguages };
