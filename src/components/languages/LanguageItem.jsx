@@ -20,5 +20,7 @@ LanguageItem.propTypes = {
   designedBy: PropTypes.string.isRequired,
   firstAppeared: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired
 };
+
+export default LanguageItem;
