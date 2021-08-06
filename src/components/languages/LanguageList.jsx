@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import LanguageItem from './LanguageItem';
 
 const LanguageList = ({ languages }) => {
   const languageItems = languages.map(language => ( 
     <li key={language.id}>
-      <LanguageItem {...language} />
+      <Link to={`/${language.id}`}>
+        <LanguageItem {...language} />
+      </Link>
     </li>
   ));
 
