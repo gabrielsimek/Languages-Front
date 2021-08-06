@@ -24,7 +24,6 @@ const useForm = () => {
     history.push(`/${newLanguage.id}`);
   };
   
-  
   return [name, logo, designedBy, 
     firstAppeared, website, 
     handleChange, handleSubmit];
