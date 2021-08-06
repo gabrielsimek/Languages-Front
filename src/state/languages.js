@@ -18,8 +18,8 @@ const useLanguages = () => {
 const useLanguage = () => {
   const [language, setLanguage] = useState([]);
   const [loading, setLoading] = useState(true);
-  //   const { id } = useParams();
-  const id = 1;
+  const { id } = useParams();
+  
   useEffect(() => {
     fetchLanguage(id)
       .then(language => setLanguage(language))
