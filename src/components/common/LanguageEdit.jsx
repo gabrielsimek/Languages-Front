@@ -2,8 +2,6 @@ import React from 'react';
 import useForm from '../../state/forms';
 import PropTypes from 'prop-types';
 
-const inputs = ['name', 'logo', 'designedBy', 'firstAppeared', 'website'];
-
 const LanguageEdit = ({  onSubmit }) => {
   const [name, logo, designedBy, firstAppeared, website, onChange] = useForm();
   return (
@@ -42,6 +40,15 @@ const LanguageEdit = ({  onSubmit }) => {
           type="text"
           name="firstAppeared"
           value={firstAppeared}
+          onChange={onChange}
+        />
+      </label>
+      <label >
+        website
+        <input
+          type="text"
+          name="website"
+          value={website}
           onChange={onChange}
         />
       </label>

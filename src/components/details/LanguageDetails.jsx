@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../state/languages';
 const LanguageDetails = () => {
-  //loading, language from useLanguage
   const [language, loading] = useLanguage();
 
   if(loading) return <h1>Loading...</h1>;
