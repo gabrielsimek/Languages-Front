@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { fetchLanguages } from '../services/languagesApi';
+import { useParams } from 'react-router';
+import { fetchLanguage, fetchLanguages } from '../services/languagesApi';
 const useLanguages = () => {
   const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,6 +16,16 @@ const useLanguages = () => {
 
 
 const useLanguage = () => {
+  const [language, setLanguage] = useState([]);
+  const [loading, setLoading] = useState(true);
+  //   const { id } = useParams();
+  const id = 1;
+  useEffect(() => {
+    fetchLanguage(id)
+      .then(language => setLanguage(language))
+      .finally(() => setLoading(false));
+  }, []);
     
+  return [language, loading];
 };
-export { useLanguages };
+export { useLanguages, useLanguage };
