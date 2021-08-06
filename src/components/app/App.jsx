@@ -6,9 +6,10 @@ import {
 import LanguagePage from '../languages/LanguagePage';
 import LanguageDetails from '../details/LanguageDetails';
 import LanguageEdit from '../common/LanguageEdit';
+import LanguageAddPage from '../language-add/LanguageAddPage';
 export default function App() {
   return (
-    <LanguageEdit/>
+    <LanguageAddPage/>
     // <Switch>
     //   <Route exact={true} path={'/:id'} component={LanguageDetails} />
     //   <Route exact={true} path={'/'} component={LanguagePage} />

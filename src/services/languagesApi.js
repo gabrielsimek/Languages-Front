@@ -11,4 +11,18 @@ const fetchLanguage = async (id) => {
   const language = await res.json();
   return language;
 };
-export { fetchLanguages, fetchLanguage };
+
+const addLanguage = async (body) => {
+  
+  const res = await fetch('http://localhost:8001/languages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+  const language = await res.json();
+
+  return language;
+};
+export { fetchLanguages, fetchLanguage, addLanguage };

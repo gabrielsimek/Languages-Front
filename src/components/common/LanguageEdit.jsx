@@ -2,10 +2,10 @@ import React from 'react';
 import useForm from '../../state/forms';
 import PropTypes from 'prop-types';
 
-const LanguageEdit = ({  onSubmit }) => {
-  const [name, logo, designedBy, firstAppeared, website, onChange] = useForm();
+const LanguageEdit = () => {
+  const [name, logo, designedBy, firstAppeared, website, onChange, onSubmit] = useForm();
   return (
-    <form onSubmit={onSubmit} 
+    <form onSubmit={onSubmit}
       style={{ display: 'flex', flexDirection: 'column' }}>
       <label >
         name
@@ -57,8 +57,8 @@ const LanguageEdit = ({  onSubmit }) => {
   );
 };
 
-LanguageEdit.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-};
+// LanguageEdit.propTypes = {
+//   onSubmit: PropTypes.func.isRequired
+// };
 
 export default LanguageEdit;
