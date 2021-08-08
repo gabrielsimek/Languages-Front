@@ -38,4 +38,14 @@ const editLanguage = async (id, body) => {
   const language = await res.json();
   return language;
 };
-export { fetchLanguages, fetchLanguage, addLanguage, editLanguage };
+
+
+const deleteLanguage = async (id) => {
+  const res = await fetch(`http://localhost:8001/languages/${id}`, {
+    method: 'DELETE'
+  });
+  const language = await res.json();
+  return language;
+};
+
+export { fetchLanguages, fetchLanguage, addLanguage, editLanguage, deleteLanguage };

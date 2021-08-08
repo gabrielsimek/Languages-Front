@@ -58,8 +58,8 @@ const LanguageEdit = ({ language }) => {
   );
 };
 
-// LanguageEdit.propTypes = {
-//   onSubmit: PropTypes.func.isRequired
-// };
+LanguageEdit.propTypes = {
+  language: PropTypes.object
+};
 
 export default LanguageEdit;

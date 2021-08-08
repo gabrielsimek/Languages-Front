@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchLanguage } from '../../services/languagesApi';
+import { useLanguage } from '../../state/languages';
 import LanguageEdit from '../common/LanguageEdit';
+import LanguageDelete from '../language-delete/DeleteLanguage';
 
 const LanguageEditPage = () => {
-  const [language, setLanguage] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const { id } = useParams();
-  useEffect(() => {
-    fetchLanguage(id)
-      .then(language => setLanguage(language))
-      .finally(() => setLoading(false));
-  }, []);  
+  const [language, loading] = useLanguage();
   if(loading) return <h1>Loading...</h1>;
-  return <LanguageEdit language={language} />;
+  return (<>
+    <LanguageEdit language={language}  />
+    <LanguageDelete name={language.name} id={language.id} />
+  </>);
+  
 };
 
 export default LanguageEditPage;

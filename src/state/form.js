@@ -29,8 +29,6 @@ const useForm = (language) => {
       const newLanguage = await addLanguage({ name, logo, designedBy, firstAppeared, website });
       history.push(`/${newLanguage.id}`);
     }
-
-   
   };
   
   return [name, logo, designedBy, 
