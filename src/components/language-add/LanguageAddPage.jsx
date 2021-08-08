@@ -1,5 +1,5 @@
 import React from 'react';
-import LanguageEdit from '../common/LanguageEdit';
+import LanguageEdit from '../common/LanguageForm';
 // import { addLanguage } from '../../services/languagesApi';
 const LanguageAddPage = () => {
   return <LanguageEdit  />;

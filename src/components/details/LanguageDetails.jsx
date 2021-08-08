@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../state/languages';
+import LanguageDelete from '../language-delete/DeleteLanguage';
 const LanguageDetails = () => {
   const [language, loading] = useLanguage();
 
@@ -15,6 +16,7 @@ const LanguageDetails = () => {
         <a href={language.website}>Website Link</a>
       </article>
       <Link to={`/edit/${language.id}`} >Edit</Link>
+      <LanguageDelete name={language.name} id={language.id} />
     </>
   );
 };
