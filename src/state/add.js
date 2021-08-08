@@ -9,7 +9,8 @@ const useForm = () => {
   const [firstAppeared, setFirstAppeared] = useState('');
   const [website, setWebsite] = useState('');
   const history = useHistory();
-
+  
+  // two dif. useForm
   const handleChange = ({ target }) => {
     if(target.name === 'name') setName(target.value);
     if(target.name === 'logo')  setLogo(target.value);

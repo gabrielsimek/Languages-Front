@@ -1,9 +1,10 @@
 import React from 'react';
-import useForm from '../../state/forms';
 import PropTypes from 'prop-types';
+import useAdd from '../../state/add';
 
 const LanguageEdit = () => {
-  const [name, logo, designedBy, firstAppeared, website, onChange, onSubmit] = useForm();
+  const [name, logo, designedBy, firstAppeared, website, onChange, onSubmit] = useAdd();
+  
   return (
     <form onSubmit={onSubmit}
       style={{ display: 'flex', flexDirection: 'column' }}>
