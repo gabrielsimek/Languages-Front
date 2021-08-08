@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import useAdd from '../../state/add';
 
-const LanguageEdit = () => {
-  const [name, logo, designedBy, firstAppeared, website, onChange, onSubmit] = useAdd();
+const LanguageEdit = ({ name, logo, designedBy, firstAppeared, website, onChange, onSubmit }) => {
+  
   
   return (
     <form onSubmit={onSubmit}
