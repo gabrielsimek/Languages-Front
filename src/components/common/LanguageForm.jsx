@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useForm from '../../state/form.js';
+import './LanguageForm.css';
  
 const LanguageEdit = ({ language }) => {
   const [name, logo, designedBy, firstAppeared, website, onChange, onSubmit] = useForm(language);
 
   return (
-    <form onSubmit={onSubmit}
+    <form className="LanguageForm" onSubmit={onSubmit}
       style={{ display: 'flex', flexDirection: 'column' }}>
       <label >
-        name
+        <span>Name</span>
         <input
+          required
           type="text"
           name="name"
           value={name}
@@ -18,8 +20,9 @@ const LanguageEdit = ({ language }) => {
         />
       </label>
       <label >
-        logo
+        <span>Logo</span>
         <input
+          required
           type="text"
           name="logo"
           value={logo}
@@ -27,8 +30,9 @@ const LanguageEdit = ({ language }) => {
         />
       </label>
       <label >
-        designedBy
+        <span>Designed By</span>
         <input
+          required
           type="text"
           name="designedBy"
           value={designedBy}
@@ -36,17 +40,20 @@ const LanguageEdit = ({ language }) => {
         />
       </label>
       <label >
-        firstAppeared
+        <span>First Appeared</span>
         <input
+          required pattern = "^(0[1-9]|1[012])[/](0[1-9]|[12][0-9]|3[01])[/](19|20)\d\d$"
           type="text"
           name="firstAppeared"
           value={firstAppeared}
           onChange={onChange}
+          placeholder="dd/mm/yyyy"
         />
       </label>
       <label >
-        website
+        <span>Website</span>
         <input
+          required
           type="text"
           name="website"
           value={website}

@@ -1,0 +1,17 @@
+.LanguageForm  {
+    background: grey;
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .LanguageForm label span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: .85rem;
+    text-transform: uppercase;
+  }
+
+  .LanguageForm button {
+      margin-top: 20px;
+      width: 43%;
+  }
