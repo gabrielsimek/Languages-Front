@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8001/languages';
+const BASE_URL = 'https://glacial-refuge-12601.herokuapp.com/languages';
 //https://glacial-refuge-12601.herokuapp.com/languages
 const fetchLanguages = async () => {
   const res = await fetch(BASE_URL);
