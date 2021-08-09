@@ -5,14 +5,11 @@ import LanguageItem from './LanguageItem';
 import './LanguageList.css';
 const LanguageList = ({ languages }) => {
   const languageItems = languages.map(language => ( 
-    <li 
-      className="LanguageItem"
+    
+
+    <LanguageItem 
       key={language.id}
-    >
-      <Link to={`/${language.id}`}>
-        <LanguageItem {...language} />
-      </Link>
-    </li>
+      {...language} />
   ));
 
   return <ul className="LanguageList">{languageItems}</ul>;

@@ -1,0 +1,33 @@
+.LanguageItem {
+
+    list-style: none;
+    background: white;
+    border: 1px solid darkgray;
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.LanguageItem a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.LanguageItem h2 {
+    margin: 0;
+}
+
+.LanguageItem img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .LanguageItem p {
+    margin: 0;
+    font-size: .9rem;
+  }
+  
+  
