@@ -27,7 +27,7 @@ const addLanguage = async (body) => {
 };
 
 const editLanguage = async (id, body) => {
-  const res = await fetch('http://localhost:8001/languages/1', {
+  const res = await fetch(`http://localhost:8001/languages/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
