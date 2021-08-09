@@ -4,7 +4,7 @@ import useForm from '../../state/form.js';
  
 const LanguageEdit = ({ language }) => {
   const [name, logo, designedBy, firstAppeared, website, onChange, onSubmit] = useForm(language);
-  console.log(language);
+
   return (
     <form onSubmit={onSubmit}
       style={{ display: 'flex', flexDirection: 'column' }}>

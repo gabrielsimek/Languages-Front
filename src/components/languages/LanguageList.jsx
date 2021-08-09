@@ -2,17 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import LanguageItem from './LanguageItem';
-
+import './LanguageList.css';
 const LanguageList = ({ languages }) => {
   const languageItems = languages.map(language => ( 
-    <li key={language.id}>
+    <li 
+      className="LanguageItem"
+      key={language.id}
+    >
       <Link to={`/${language.id}`}>
         <LanguageItem {...language} />
       </Link>
     </li>
   ));
 
-  return <ul>{languageItems}</ul>;
+  return <ul className="LanguageList">{languageItems}</ul>;
 };
 
 LanguageList.propTypes = {
