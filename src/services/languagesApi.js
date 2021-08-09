@@ -7,14 +7,14 @@ const fetchLanguages = async () => {
 };
 
 const fetchLanguage = async (id) => {
-  const res = await fetch(`http://localhost:8001/languages/${id}`);
+  const res = await fetch(`https://glacial-refuge-12601.herokuapp.com/languages/${id}`);
   const language = await res.json();
   return language;
 };
 
 const addLanguage = async (body) => {
   
-  const res = await fetch('http://localhost:8001/languages', {
+  const res = await fetch('https://glacial-refuge-12601.herokuapp.com/languages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ const addLanguage = async (body) => {
 };
 
 const editLanguage = async (id, body) => {
-  const res = await fetch(`http://localhost:8001/languages/${id}`, {
+  const res = await fetch(`https://glacial-refuge-12601.herokuapp.com/languages/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ const editLanguage = async (id, body) => {
 
 
 const deleteLanguage = async (id) => {
-  const res = await fetch(`http://localhost:8001/languages/${id}`, {
+  const res = await fetch(`https://glacial-refuge-12601.herokuapp.com/languages/${id}`, {
     method: 'DELETE'
   });
   const language = await res.json();
