@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { signUp } from '../services/authServices';
 const useAuth = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -11,9 +11,10 @@ const useAuth = () => {
     if(target.name === 'password') setPassword(target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, password);
+    const user = await signUp({ name, email, password });
+    console.log(user);
   };
 
   return [name, email, password, handleChange, handleSubmit];
