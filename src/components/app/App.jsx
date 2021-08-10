@@ -17,7 +17,6 @@ export default function App() {
       
       <main className="main">
         <Switch>
-
           <Route exact={true} path={'/auth'} component={AuthPage} />
           <Route exact={true} path={'/add'} component={LanguageAddPage} />
           <Route exact={true} path={'/edit/:id'} component={LanguageEditPage} />
